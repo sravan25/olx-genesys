@@ -2,7 +2,6 @@ import {
     AUTH_SUCCESS,
     AUTH_FAILED,
     AUTH_VERIFY,
-    SYSTEM_IPTOKEN,
   } from "../actions";
   import cloneDeep from "lodash/cloneDeep";
   
@@ -46,13 +45,7 @@ import {
         newState.auth.firstName = action.params.firstName;
         newState.auth.lastName = action.params.lastName;
         return newState;
-      case SYSTEM_IPTOKEN:
-        newState = cloneDeep(state);
-        newState.system.token = action.params.token;
-        newState.system.ipaddress = action.params.ipaddress;
-        return newState;
       default:
         return state;
     }
   }
-  

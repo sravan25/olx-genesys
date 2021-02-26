@@ -1,10 +1,13 @@
 import Login from './component/Login'
+import Header from "./component/Header";
+
 import './App.css';
+import FilePersonIcon  from "./icons/Personfill";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Header></Header>
       <Login></Login>
     </div>
   );
